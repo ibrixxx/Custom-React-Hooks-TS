@@ -8,7 +8,12 @@ export default function ToggleComp(): ReactElement{
         event.preventDefault();
     
         const button: HTMLButtonElement = event.currentTarget;
-        return setValue
+        if(button.name === '1')
+            setValue(() => {})
+        else if(button.name === '2')
+            setValue(true)
+        else
+            setValue(false)
     };
 
 
